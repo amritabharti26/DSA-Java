@@ -1,3 +1,9 @@
-/out/
-/.idea/
-*.class
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Build output
+out/
+
+# OS files
+.DS_Store
