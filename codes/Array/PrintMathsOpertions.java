@@ -26,7 +26,7 @@ public class PrintMathsOpertions {
         //product of Array elements
         int product = 1;
         for (int i= 0; i<n; i++){
-           product *=arr[i]; //print sum of array element
+           product *=arr[i]; //print product of array element
 
         }
         System.out.println(product +" ");

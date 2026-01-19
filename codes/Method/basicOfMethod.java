@@ -1,5 +1,7 @@
 package Method;
 
+import java.util.Scanner;
+
 public class basicOfMethod {
     public static void main(String[] args) {
         // Math.  wale function
@@ -12,6 +14,8 @@ public class basicOfMethod {
 //        System.out.println(Math.max(3, Math.max(7,2)));
 //        System.out.println(Math.pow(3.689,2.87));
 //        System.out.println(Math.pow(-3.689,-3));//power can't be in points error: NaN
+
+          System.out.println(Math.abs(-2)); // -ve no. ko positive banata hai
 
     }
 }
