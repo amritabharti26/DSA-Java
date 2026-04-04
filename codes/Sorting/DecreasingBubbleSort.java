@@ -2,7 +2,7 @@ package Sorting;
 
 import java.util.Scanner;
 
-public class OptimisedBubbleSort {
+public class DecreasingBubbleSort {
     public static int [] ArrayCreate(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Array size : ");
@@ -23,36 +23,25 @@ public class OptimisedBubbleSort {
     }
 
     public static void main(String[] args) {
-        int [] arr = ArrayCreate(); // call ArrayCreate method for creating array
+        // sort array in decreasing order
+
+        int [] arr = ArrayCreate();
         int n = arr.length;
         print(arr);
-
-        // Optimised Bubble sort
         boolean isSorted = true;
-        for(int i = 1; i < n-1; i++) {
-            // this loop sort array if array not sorted
-            for (int j = 0; j < n-1; j++) {
-                if (arr[j] > arr[j + 1]) {
+        for(int i= 1; i<n-1; i++){
+            for (int j=0; j<n-1; j++){
+                if(arr[j]<arr[j+1]){
                     isSorted = false;
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    int temp= arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j] =temp;
+
                 }
-            }
-            if(isSorted==true){
-                System.out.println("array already sorted");
-                break;
+                if(isSorted==true)break;
             }
         }
-        System.out.println("Sorted Array: ");
+        System.out.println("sorted array in decreasing order:");
         print(arr);
     }
 }
-
-
-// TIME COMPLEXITY:
-// BEST CASE: O(n)
-// AVG CASE:  O(n^2)
-// WORST CASE:  O(n^2)
-
-// SPACE COMPLEXITY: O(1)

@@ -2,7 +2,8 @@ package Sorting;
 
 import java.util.Scanner;
 
-public class OptimisedBubbleSort {
+public class PushZerosToEnd {
+
     public static int [] ArrayCreate(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Array size : ");
@@ -23,36 +24,24 @@ public class OptimisedBubbleSort {
     }
 
     public static void main(String[] args) {
-        int [] arr = ArrayCreate(); // call ArrayCreate method for creating array
+        int [] arr = ArrayCreate();
         int n = arr.length;
         print(arr);
 
-        // Optimised Bubble sort
-        boolean isSorted = true;
+        // Move all Zeros to end
         for(int i = 1; i < n-1; i++) {
-            // this loop sort array if array not sorted
             for (int j = 0; j < n-1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    isSorted = false;
+                if (arr[j] ==0 && arr[j+1] !=0) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
             }
-            if(isSorted==true){
-                System.out.println("array already sorted");
-                break;
-            }
         }
-        System.out.println("Sorted Array: ");
+        System.out.println("Array after moving Zeros: ");
         print(arr);
     }
 }
 
-
-// TIME COMPLEXITY:
-// BEST CASE: O(n)
-// AVG CASE:  O(n^2)
-// WORST CASE:  O(n^2)
-
-// SPACE COMPLEXITY: O(1)
+// TIME COMPLEXITY of Bubble Method: O(n^2)
+// SPACE COMPLEXITY of Optimised Method: O(1)

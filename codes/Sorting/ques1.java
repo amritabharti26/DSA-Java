@@ -23,3 +23,5 @@ public class ques1 {
         else System.out.println("array is not sorted : "+ Arrays.toString(arr));
     }
 }
+
+// SPACE COMPLEXITY: O(1)

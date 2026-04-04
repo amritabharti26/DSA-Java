@@ -26,3 +26,10 @@ public class BubbleSort {
         print(arr);
     }
 }
+
+// TIME COMPLEXITY:
+// BEST CASE: O(n^2)
+// AVG CASE:  O(n^2)
+// WORST CASE:  O(n^2)
+
+// SPACE COMPLEXITY: O(1)

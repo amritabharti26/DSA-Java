@@ -2,7 +2,7 @@ package Sorting;
 
 import java.util.Scanner;
 
-public class OptimisedBubbleSort {
+public class OptimisedBubbleSort1 {
     public static int [] ArrayCreate(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Array size : ");
@@ -23,23 +23,22 @@ public class OptimisedBubbleSort {
     }
 
     public static void main(String[] args) {
-        int [] arr = ArrayCreate(); // call ArrayCreate method for creating array
+        int [] arr = ArrayCreate();
         int n = arr.length;
         print(arr);
 
-        // Optimised Bubble sort
-        boolean isSorted = true;
+        // Bubble Sort Optimised
         for(int i = 1; i < n-1; i++) {
-            // this loop sort array if array not sorted
+            int swap =0;
             for (int j = 0; j < n-1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    isSorted = false;
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    swap++;
                 }
             }
-            if(isSorted==true){
+            if(swap==0){
                 System.out.println("array already sorted");
                 break;
             }
@@ -54,5 +53,3 @@ public class OptimisedBubbleSort {
 // BEST CASE: O(n)
 // AVG CASE:  O(n^2)
 // WORST CASE:  O(n^2)
-
-// SPACE COMPLEXITY: O(1)
